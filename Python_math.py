@@ -97,3 +97,5 @@ leg = float(input("enter the leg(a) of the triangle: "))
 bottom = float(input("enter bottom(b) of the triangle: "))
 hypotinuse = math.sqrt(leg ** 2 + bottom ** 2)
 print(hypotinuse)
+ 
+ 
