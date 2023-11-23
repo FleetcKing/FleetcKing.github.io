@@ -33,6 +33,7 @@ def single_player():
 #multiplayer
 def multiplayer():
         #user1 guess
+        player1_name = input("Player 1, enter your name: ")
         player1  = str.lower(input('''Player 1, guess rock paper scissors. type "r" for rock, "p" for paper, and "s" for scissors: '''))
         player1_string = []
         if player1 == "r":
@@ -43,6 +44,7 @@ def multiplayer():
             player1_string.append("scissors")
         
         #user2 guess
+        player2_name = input("player 2 enter your name: ")
         player2  = str.lower(input('''Player 2, guess rock paper scissors. type "r" for rock, "p" for paper, and "s" for scissors: '''))
         player2_string = []
         if player2 == "r":
@@ -54,16 +56,52 @@ def multiplayer():
 
         #draw
         if player1 == "r" and player2 == "r" or player1 == "p" and player2 == "p" or player1 == "s" and player2 == "s":
-            print(f"Player 1 chose {player1_string}, player 2 chose {player2_string}. Thats a draw")
+            print(f"{player1_name} chose {player1_string}, {player2_name} chose {player2_string}. Thats a draw")
         #player 1 win
         if player1 == "r" and player2 == "s" or player1 == "p" and player2 == "r" or player1 == "s" and player2 == "p":
-            print(f"Player 1 chose {player1_string}, player 2 chose {player2_string}. Player 1 wins")
+            print(f"{player1_name} chose {player1_string}, {player2_name} chose {player2_string}. {player1_name} Wins!")
         #player 2 win
         if player1 == "r" and player2 == "p" or player1 == "p" and player2 == "s" or player1 == "s" and player2 == "r":
-            print(f"Player 1 chose {player1_string}, player 2 chose {player2_string}. Player 2 wins")
+            print(f"{player1_name} chose {player1_string}, {player2_name} chose {player2_string}. {player2_name} Wins!")
+#cheats
+def cheats():
+        #user1 guess
+        player1_name = input("Player 1, enter your name: ")
+        player1  = str.lower(input('''Player 1, guess rock paper scissors. type "r" for rock, "p" for paper, and "s" for scissors: '''))
+        
+        #user2 guess
+        player2_name = input("player 2 enter your name: ")
+        player2  = str.lower(input('''Player 2, guess rock paper scissors. type "r" for rock, "p" for paper, and "s" for scissors: '''))
+        player2_string = []
+        if player2 == "r":
+            player2_string.append("rock")
+        if player2 == "p":
+            player2_string.append("paper")
+        if player2 == "s":
+            player2_string.append("scissors")
+
+        player1_string = []
+        if player2 == "r":
+            player1_string.append("paper")
+        if player2 == "p":
+            player1_string.append("scissors")
+        if player1 == "s":
+            player1_string.append("rock")
+        
+        #player 1 wins
+        if player1 == "r" and player2 == "r" or player1 == "p" and player2 == "p" or player1 == "s" and player2 == "s":
+            print(f"{player1_name} chose {player1_string}, {player2_name} chose {player2_string}. {player1_name} Wins!")
+        #player 1 wins
+        if player1 == "r" and player2 == "s" or player1 == "p" and player2 == "r" or player1 == "s" and player2 == "p":
+            print(f"{player1_name} chose {player1_string}, {player2_name} chose {player2_string}. {player1_name} Wins!")
+        #player 1 wins
+        if player1 == "r" and player2 == "p" or player1 == "p" and player2 == "s" or player1 == "s" and player2 == "r":
+            print(f"{player1_name} chose {player1_string}, {player2_name} chose {player2_string}. {player1_name} Wins!")
+# 3 player multiplayer
 
 #choosing single player or multiplayer 
 single_or_multi = str.lower(input('''singleplayer or multiplayer? "s" for single, m for multiplayer: '''))
+
 if single_or_multi == "s":
     print("singleplayer game")
     single_player()
@@ -74,4 +112,10 @@ if single_or_multi == "m":
 
 if single_or_multi == "c":
     print("multiplayer game")
-    
+    cheats()
+
+#to do
+#add while loops on user inputs
+#add 3 player multiplayer
+#add a fun different game mode like maybe rock papper scissors bomb
+#add like best of 3 game mode 
