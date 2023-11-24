@@ -13,6 +13,10 @@ def single_player():
             computer_guess.append("scissors")
         #user guess
         user_guess = str.lower(input('''guess rock paper scissors. type "r" for rock, "p" for paper, and "s" for scissors: '''))
+        while user_guess != "r" and user_guess != "p" and user_guess != "s":
+            print(f"{user_guess} is invalid")
+            user_guess = str.lower(input('''try typeing "r" for rock, "p" for paper, and "s" for scissors: '''))
+        
         user_guess_string = []
         if user_guess == "r":
             user_guess_string.append("rock")
@@ -34,7 +38,13 @@ def single_player():
 def multiplayer():
         #user1 guess
         player1_name = input("Player 1, enter your name: ")
+        while player1_name == "":
+            print("you must type in your name: ")
+            player1_name = input("Player 1, enter your name: ")
         player1  = str.lower(input('''Player 1, guess rock paper scissors. type "r" for rock, "p" for paper, and "s" for scissors: '''))
+        while player1 != "r" and player1 != "p" and player1 != "s":
+            print(f"{player1} is invalid")
+            player1  = str.lower(input('''Try typeing "r" for rock, "p" for paper, and "s" for scissors: '''))
         player1_string = []
         if player1 == "r":
             player1_string.append("rock")
@@ -45,7 +55,13 @@ def multiplayer():
         
         #user2 guess
         player2_name = input("player 2 enter your name: ")
+        while player2_name == "":
+            print("you must type in your name: ")
+            player2_name = input("Player 2, enter your name: ")
         player2  = str.lower(input('''Player 2, guess rock paper scissors. type "r" for rock, "p" for paper, and "s" for scissors: '''))
+        while player2 != "r" and player2 != "p" and player2 != "s":
+            print(f"{player2} is invalid")
+            player2  = str.lower(input('''Try typeing "r" for rock, "p" for paper, and "s" for scissors: '''))
         player2_string = []
         if player2 == "r":
             player2_string.append("rock")
@@ -67,11 +83,25 @@ def multiplayer():
 def cheats():
         #user1 guess
         player1_name = input("Player 1, enter your name: ")
-        player1  = str.lower(input('''Player 1, guess rock paper scissors. type "r" for rock, "p" for paper, and "s" for scissors: '''))
+        while player1_name == "":
+            print("you must enter your name: ")
+            player1_name = input("Player 1, enter your name: ")
+        
+        player1 = str.lower(input('''Player 1, guess rock paper scissors. type "r" for rock, "p" for paper, and "s" for scissors: '''))
+        while player1 != "r" and player1 != "p" and player1 != "s":
+            print(f"{player1} is invalid")
+            player1  = str.lower(input('''try typing "r" for rock, "p" for paper, and "s" for scissors: '''))
         
         #user2 guess
         player2_name = input("player 2 enter your name: ")
+        while player2_name == "":
+            print("you must enter your name: ")
+            player2_name = input("player2 enter your name: ")
         player2  = str.lower(input('''Player 2, guess rock paper scissors. type "r" for rock, "p" for paper, and "s" for scissors: '''))
+        while player2 != "r" and player2 != "p" and player2 != "s":
+            print(f"{player2} is invalid.")
+            player2 = str.lower(input('''Try typing "r" for rock, "p" for paper, and "s" for scissors: '''))
+            
         player2_string = []
         if player2 == "r":
             player2_string.append("rock")
@@ -85,22 +115,17 @@ def cheats():
             player1_string.append("paper")
         if player2 == "p":
             player1_string.append("scissors")
-        if player1 == "s":
+        if player2 == "s":
             player1_string.append("rock")
-        
-        #player 1 wins
-        if player1 == "r" and player2 == "r" or player1 == "p" and player2 == "p" or player1 == "s" and player2 == "s":
-            print(f"{player1_name} chose {player1_string}, {player2_name} chose {player2_string}. {player1_name} Wins!")
-        #player 1 wins
-        if player1 == "r" and player2 == "s" or player1 == "p" and player2 == "r" or player1 == "s" and player2 == "p":
-            print(f"{player1_name} chose {player1_string}, {player2_name} chose {player2_string}. {player1_name} Wins!")
-        #player 1 wins
-        if player1 == "r" and player2 == "p" or player1 == "p" and player2 == "s" or player1 == "s" and player2 == "r":
-            print(f"{player1_name} chose {player1_string}, {player2_name} chose {player2_string}. {player1_name} Wins!")
+       
+        print(f"{player1_name} chose {player1_string}, {player2_name} chose {player2_string}. {player1_name} Wins!")
 # 3 player multiplayer
 
 #choosing single player or multiplayer 
 single_or_multi = str.lower(input('''singleplayer or multiplayer? "s" for single, m for multiplayer: '''))
+while single_or_multi != "s" and single_or_multi != "m" and single_or_multi != "c":
+    print(f"{single_or_multi} is invalid")
+    single_or_multi = str.lower(input('''try typing "s" for single, m for multiplayer: '''))
 
 if single_or_multi == "s":
     print("singleplayer game")
