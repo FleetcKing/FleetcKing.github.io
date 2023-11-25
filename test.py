@@ -1,22 +1,3 @@
-#username may be no longer than 12 charictors
-#username my have no spaces
-#username must not contain digets
-
-username = input("Enter your username. 12 charictors maximum, no spaces, cant contain numbers: ")
-name_len = len(username)
-name_space = username.find(" ")
-name_numb = username.isalpha()
-
-if len(username) > 12:
-    print("Your username cant be longer than 12!")
-
-elif not username.find(" ") == -1:
-    print("Your username cant have spaces!")
-elif not username.isalpha():
-    print("No numbers!")
-else:
-    print(f"your username is {username}")
-
 #validate username
 #no longer than 12 charictors
 #must have a number
@@ -51,5 +32,4 @@ while name != -1:
     name = username.find(" ")
 
 print(f"{username} is your username")
-
 
