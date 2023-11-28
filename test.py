@@ -1,8 +1,5 @@
-list1 = "hat"
-list2 = "ha"
-list2 = list2 + "t"
-if list1 == list2:
-    print("you win")
-else:
-    print("you loose")
-    
+email = "fleet.king10@gmail.com"
+name_find = email.find("@")
+namer = email[::-1]
+print(namer)
+
