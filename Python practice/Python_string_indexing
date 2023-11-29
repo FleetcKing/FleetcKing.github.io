@@ -1,0 +1,30 @@
+#indexing is accessing elements of a sequince using []
+# [start : end : step]
+
+credit_numb = "1234-5678-9012-3456"
+#finding the 3ed diget
+print(credit_numb[2])
+
+#finding the first 4 digiets
+print(credit_numb[:4])
+
+#fidning something in the middle
+print(credit_numb[4:8])
+
+#finding everything past first 4 digits
+print(credit_numb[5:])
+
+#finding the last digit
+print(credit_numb[-1:])
+
+#print every second charictor in a string
+print(credit_numb[::2])
+
+
+#find the last 4 digits of a credit card number
+last4 = credit_numb[-4:]
+print(f"XXXX-XXXX-XXXX-{last4}")
+
+#reverse the charictors in the string
+credit_numb = credit_numb[::-1]
+print(credit_numb)
