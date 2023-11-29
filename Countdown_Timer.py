@@ -22,4 +22,10 @@ def stopwatch():
         for numb in range(0,1000000):
             print(numb)
             time.sleep(1)
+        for stop in range(0,1000000):
+            count = input('''type "start" to start the timer and "stop" to stop the timer: ''')
+            count == count.lower()
+            time.sleep(1)
+    print(f"your time was {numb} seconds")
+
 stopwatch()

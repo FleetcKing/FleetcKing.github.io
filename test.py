@@ -1,5 +1,8 @@
-email = "fleet.king10@gmail.com"
-name_find = email.find("@")
-namer = email[::-1]
-print(namer)
+#string methods
+lower = []
+email = input("enter your email: ")
+lower = lower.append(email.lower())
+(len(email)) 
+print(lower)
+
 
