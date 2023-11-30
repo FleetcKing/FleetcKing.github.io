@@ -1,39 +1,50 @@
-#while loop will execute code while some condition remains true
-name = input("enter your name: ")
+# #while loop will execute code while some condition remains true
+# name = input("enter your name: ")
 
-#strings
-while name == "":
-    print("you did not enter your name")
-    name = input("enter your name: ")
-print(f"your name is {name}")
+# #strings
+# while name == "":
+#     print("you did not enter your name")
+#     name = input("enter your name: ")
+# print(f"your name is {name}")
 
-#integers
-age = int(input("enter your age: "))
-while age < 0: 
-    print("you wherent born yet, try again!: ")
-    age = int(input("enter your age: "))
-print(f"you are {age} years old")
+# #integers
+# age = int(input("enter your age: "))
+# while age < 0: 
+#     print("you wherent born yet, try again!: ")
+#     age = int(input("enter your age: "))
+# print(f"you are {age} years old")
 
-#logical oporators
+# #logical oporators
 
-food = input("enter a food you like (q to quit): ")
-while not food == "q":
-    print(f"you like {food}")
-    food = input("enter another food you like (q to quit): ")
+# food = input("enter a food you like (q to quit): ")
+# while not food == "q":
+#     print(f"you like {food}")
+#     food = input("enter another food you like (q to quit): ")
 
-print("bye")
+# print("bye")
 
-food = input("enter a food you like (q to quit): ")
-while food != "q":
-    print(f"you like {food}")
-    food = input("enter another food you like (q to quit): ")
+# food = input("enter a food you like (q to quit): ")
+# while food != "q":
+#     print(f"you like {food}")
+#     food = input("enter another food you like (q to quit): ")
 
-print("bye")
+# print("bye")
 
-# "or" logical oporator
-num = int(input("enter a number between 1-10: "))
-while num < 1 or num > 10:
-    print(f"{num} is not valad: ")
-    num = int(input("enter a number between 1-10: "))
-print(f"you chose {num}")
+# # "or" logical oporator
+# num = int(input("enter a number between 1-10: "))
+# while num < 1 or num > 10:
+#     print(f"{num} is not valad: ")
+#     num = int(input("enter a number between 1-10: "))
+# print(f"you chose {num}")
 
+#while true
+
+email = input("enter your email: ")
+domain_find = email.find("@")
+
+while True:
+    if domain_find == -1:
+        email = input("Your email needs a domain: ")
+        domain_find = email.find("@")
+    else:
+        break
