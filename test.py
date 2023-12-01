@@ -1,15 +1,8 @@
-#for loops
+#create a nested loop
 
-#count to 10
-
-#count to 10 backwords
-
-#count by 5's
-
-#ittarate a string
-
-#continue 
-
-#break
-
-
+#create a square
+v = "X"
+for i in range(10):
+    for i in range(7):
+        print(v, end = " ")
+    print(i)
